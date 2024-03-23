@@ -4,8 +4,8 @@ namespace Rboschin\TenantLang;
 
 class TenantLangClass
 {
-    public function __construct()
+    public function testMe()
     {
-        return 'It\'s working';
+        return 'I\'m working';
     }
 }
