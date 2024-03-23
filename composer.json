@@ -32,6 +32,12 @@
             "Rboschin\\TenantLang\\Tests\\": "tests"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rboschin/tenant-lang.git"
+        }
+    ],
     "scripts": {
         "test": "vendor/bin/pest",
             "test-coverage": "vendor/bin/pest --coverage",
