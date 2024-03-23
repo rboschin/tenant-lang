@@ -18,6 +18,7 @@
         "php": "^8.1"
     },
     "require-dev": {
+        "laravel-lang/common": "*",
         "pestphp/pest": "^2.20",
         "friendsofphp/php-cs-fixer": "^3.21.1",
         "spatie/ray": "^1.28"
@@ -32,6 +33,13 @@
             "Rboschin\\TenantLang\\Tests\\": "tests"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rboschin\\TenantLang\\TenantLangServiceProvider"
+            ]
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
@@ -41,7 +49,11 @@
     "scripts": {
         "test": "vendor/bin/pest",
             "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes"
+        "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes",
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan lang:update"
+        ]
     },
     "config": {
         "sort-packages": true,
