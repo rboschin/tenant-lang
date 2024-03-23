@@ -19,7 +19,7 @@ class SetLocale
             // User profile configuration
             \App::setLocale(\Session::get('user_lang'));
             // \Carbon\Carbon::setLocale(\Session::get('user_lang')); # ??
-        } else if (\Session::has('web_lang')) {
+        } elseif (\Session::has('web_lang')) {
             // Home page choice
             \App::setLocale(\Session::get('web_lang'));
             // \Carbon\Carbon::setLocale(\Session::get('web_lang')); # ??
