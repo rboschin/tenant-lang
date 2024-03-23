@@ -2,7 +2,7 @@
 
 namespace Rboschin\TenantLang;
 
-class TenantLangClass
+class TenantLang
 {
     public function testMe()
     {
